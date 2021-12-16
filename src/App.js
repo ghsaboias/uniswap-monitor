@@ -35,14 +35,12 @@ function App() {
 
   useEffect(() => {
     fetchData();
-    console.log('useEffect');
   }, []);
 
   async function fetchData() {
     console.log('fetching');
     const response = await client.query(query).toPromise();
     const { data } = response;
-    console.log(data);
     const { swaps } = data;
     setSwaps(swaps);
   }
