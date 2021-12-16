@@ -1,0 +1,29 @@
+.header {
+  text-align: center;
+}
+
+.swaps {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.swap {
+  margin: 1vw;
+  padding: 1.5vw;
+  border: 0.5vw solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  max-width: 40vw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.swap:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.swap p, .swap a {
+  margin: 1vw;
+}
