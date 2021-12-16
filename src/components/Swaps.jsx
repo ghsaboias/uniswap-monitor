@@ -2,7 +2,6 @@ import React from 'react';
 
 function Swaps({ swaps }) {
   function renderSwap() {
-    console.log(swaps);
     const swapElement = swaps.map((swap, i) => {
       let { amount0, amount1, amountUSD, token0, token1, transaction } = swap;
       const { symbol: symbol0 } = token0;
