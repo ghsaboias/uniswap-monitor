@@ -1,8 +1,8 @@
 import React from 'react';
 
 function Swaps({ swaps }) {
-  function renderSwap() {
-    const swapElement = swaps.map((swap, i) => {
+  function renderSwaps() {
+    const swapElements = swaps.map((swap, i) => {
       let { amount0, amount1, amountUSD, token0, token1, transaction } = swap;
       const { symbol: symbol0 } = token0;
       const { symbol: symbol1 } = token1;
@@ -42,13 +42,13 @@ function Swaps({ swaps }) {
         </div>
       )
     })
-    return swapElement;
+    return swapElements;
   }
 
   return (
     <div className="swaps">
       { swaps.length ? (
-        renderSwap()
+        renderSwaps()
       ) : (
         <span>Loading...</span>
       )}

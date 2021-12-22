@@ -8,7 +8,7 @@ const APIURL = "https://api.thegraph.com/subgraphs/name/uniswap/uniswap-v3";
 
 const query = `
   {
-    swaps(first: 10, orderBy: timestamp, orderDirection: desc) {
+    swaps(first: 20, orderBy: timestamp, orderDirection: desc) {
       token0 {
         symbol
       }
