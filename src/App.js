@@ -1,5 +1,5 @@
 import './App.css';
-import { createClient, useSubscription } from 'urql'
+import { createClient, useSubscription, defaultExchanges, subscriptionExchange } from 'urql'
 import { useEffect, useState } from 'react'
 import Swaps from './components/Swaps';
 import Header from './components/Header';
@@ -25,6 +25,7 @@ const query = `
   }
   `
 
+  // should make subscription, still need to figure out how it works
   const query1 = `
     subscription swaps {
       swaps(first: 20, orderBy: timestamp, orderDirection: desc) {
