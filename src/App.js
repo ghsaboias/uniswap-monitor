@@ -1,5 +1,5 @@
 import './App.css';
-import { createClient } from 'urql'
+import { createClient, useSubscription } from 'urql'
 import { useEffect, useState } from 'react'
 import Swaps from './components/Swaps';
 import Header from './components/Header';
@@ -23,6 +23,25 @@ const query = `
       }
     }
   }
+  `
+
+  const query1 = `
+    subscription swaps {
+      swaps(first: 20, orderBy: timestamp, orderDirection: desc) {
+        token0 {
+          symbol
+        }
+        token1 {
+          symbol
+        }
+        amount0
+        amount1
+        amountUSD
+        transaction {
+          id
+        }
+      }
+    }
   `
 
 
